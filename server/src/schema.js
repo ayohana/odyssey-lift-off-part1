@@ -1,10 +1,10 @@
-import { gql } from "apollo-server";
+const { gql } = require('apollo-server');
 
 // typeDefs = Type Definitions
 // These are all the available data types that we are able to retrieve
 // But how do we tell the GraphQL Server what to retrieve when we query it?
 // We do this by defining a special Query type.
-export const typeDefs = gql`
+const typeDefs = gql`
   """
   This is how we tell the GraphQL Server what to retrieve when we query our single endpoint.
   The fields of this Query type are entry points into the rest of our schema.
@@ -36,3 +36,4 @@ export const typeDefs = gql`
   }
 `;
 
+module.exports = typeDefs;
